@@ -1,146 +1,124 @@
-# NodeJS, Sequelize, Express Project in Clean-Code Architecture
+## mitul_s_application154
 
-**Supported version of nodejs >= 12**,
-**Supported version of sequelize >= 6**
+Generated with ❤️ from [DhiWise](https://www.dhiwise.com)
 
-## About 
-- This is a Node application, developed using Clean-Code Architecture with Node.js, ExpressJS, and Sequelize ORM. 
-- A Sql database is used for data storage, with object modeling provided by Sequelize.
-- Supported SQL Databases are - MSSQL, MySql, PostgreSQL 
+## Description
 
-## Initial
-1. ```$ npm install```
-2. ```$ npm start```
-3. Credentials
+- This React application is built using [craco](https://craco.js.org/).
+- It uses [Tailwind CSS](https://tailwindcss.com/)
+- The application is generated in JavaScript.
 
-       - One user with User role,
-	   # Default User credentials
-	   **username** : Antonietta32
-	   **password** : 9I33YXqFc7NIZNN
+## Pre-requisites
 
+- [git](https://git-scm.com/) - v2.13 or greater
+- [NodeJS](https://nodejs.org/en/) - v16 or greater
+- [npm](https://www.npmjs.com/) - v6 or greater
 
-## How to use generated APIs:
-[Click here to visit documentation](<https://docs.dhiwise.com/docs/node/generate-apis/> "API Documentation")
+## Running in dev environment
 
-## How to run with Docker ? :
-- if you have docker file you can execute following command
+1.  `cd YOUR_APPLICATION`
+2.  `npm install`
+3.  `npm start`
 
-- build the image
-	```$ docker build --pull --rm -f "Dockerfile" -t <imageName>:latest "." ```
-	
-- execute the command
-	```$ docker run -p 3000:3000 <imageName> ```
+## .env file
 
-## Folder structure:
-```
-├── app.js              			- starting point of the application
-├── constants         				- contains commonly used constants
-├── controller         				- contains execution logic for a single web route only
-├── data-access         			- contains model wise dbService specification
-	├── db                			- contains database related information
-		├── sequelize             	- folder created as per ORM
-			├── models              - model schemas
-			├── dbService.js        - contains database related functions
-			├── connection.js      	- contains database connection
-├── entities                		- contains entity files for each folder
-├── jobs                 			- contains file of CRON jobs/Schedulers
-├── middleware                		- contains middleware files
-├── postman                			- contains postman collection, environment files and swagger file.
-├── routes                			- contains all routes of application
-├── seeders                			- contains file which seeds data when application starts
-├── services                		- contains common files for services like sending Email/SMS, etc.
-├── use-case                		- contains pure business logic
-├── utils                			- contains common files
-	├── response                	- contains files work with usecase responses
-├── validation                		- contains validation related files
-	├── schema                		- contains joi validation files for models
-├── view                			- contains all views file
+This file contains various environment variables that you can configure.
+
+## Folder Structure
 
 ```
-
-## Detail Description of Files and folders
-
-1. app.js
-	- entry point of application.
-
-2. constants
-	- constants used across application.
-
-3. controller
-	- Controller files contains execution logic for a single web route only.
-```
-	├── controller
-		└── platform
-			└── model  - contains files for model
-				├── model.js  	- contains business logic
-				└── index.js  	- contains dependency injection
-```
-
-4. data-access
-	- This folder contains model wise dbService specification
-
-5. db
-	- Contains file needed to work with database
-	```
-	├── db
-		└── sequelize
-			├── model  				- contains schema file of model
-			├── connection.js  		- contains connections of database
-			└── dbService.js  		- contains functions related to work with database
+.
+├── package.json
+├── postcss.config.js
+├── craco.config.js
+├── public
+│   ├── assets
+│   │   └── images --------- All Project Images
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+├── README.md
+├── src
+│   ├── App.jsx
+│   ├── assets
+│   │   └── fonts ---------- Project fonts
+│   ├── components --------- UI and Detected Common Components
+│   ├── constants ---------- Project constants, eg: string consts
+│   ├── hooks -------------- Helpful Hooks
+│   ├── index.jsx
+│   ├── pages -------------- All route pages
+│   ├── Routes.jsx ---------- Routing
+│   ├── styles
+│   │   ├── index.css ------ Other Global Styles
+│   │   └── tailwind.css --- Default Tailwind modules
+│   └── util
+│       └── index.jsx ------- Helpful utils
+└── tailwind.config.js ----- Entire theme config, colors, fonts etc.
 ```
 
-6. entities
-	- These are the business objects of your application. These should not be affected by any change external to them, and these should be the most stable code within your application. These can be POJOs, objects with methods, or even data structures.
-7. jobs
-	- this contains file created for each CRON job/Scheduler.
+For the project to build, **these files must exist with exact filenames**:
 
-8. middleware
-	- Middleware files for authentication, authorization and role-access.
+- `public/index.html` is the page template;
+- `src/index.jsx` is the JavaScript entry point.
 
-9. postman
-	- Contains Postman API file, environment file, swagger file and HTML doc of generated APIs.
-	- Import postman-collection.json file into postman application to run and test generated APIs.
+You may create subdirectories inside src.
 
-10. routes
-	- index.js file, exports platform routes, imported into app.js to access all the routes.
-```
-	├── routes
-		├── platform
-			├── modelNameRoutes.js   - contains CRUD operation routes
-			└── index.js             - exports model routes
-		└── index.js                 - exports platform routes
-```
+## Available Scripts
 
-11. seeders
-	- Contains file which seeds data into collection.
+In the project directory, you can run:
 
-12. services
-```
-	├── services
-		├── jobs             - CRON job/scheduler service files
-		├── email            - service file for sending email
-		├── fileUpload       - service file for uploading file
-		└── sms              - service file for sending sms
-```
+### `npm start`
 
-13. use-case
-	- Contains pure business logic which is unaware of the framework/platform(web,cli,etc) and database (mongo,mysql,etc)
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-14. utils
-	- contains common utility files used in application
-```
-	├── utils
-		├── response     - files to handle response
+### `npm test`
+
+Launches the test runner in the interactive watch mode.<br>
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br>
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time.
+
+## Installing a Dependency
+
+You can install any dependencies (for example, React Router) with `npm`:
+
+```sh
+npm install --save react-router
 ```
 
-15. validation
-	- Joi validations files for each model
-	```
-	├── validation
-		├── schema      - joi  validation schema for each model
+Alternatively you may use `yarn`:
+
+```sh
+yarn add react-router
 ```
 
-16. env files
-	- You can add credentials and port, database values as per your environment(Development/Production).
-	- If you are running test environment then test cases will run using test database,and its configuration is there inside app.js
-		
+## License
+
+MIT License
+
+Copyright (c) 2023 DhiWise
+
+Permission is hereby granted, to any person obtaining a copy of this software and associated documentation files (the "Software"),to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## DhiWise Support
+
+<a href="https://twitter.com/dhiwise"><img src="https://user-images.githubusercontent.com/35039342/55471524-8e24cb00-5627-11e9-9389-58f3d4419153.png" width="60" alt="DhiWise Twitter"></a>
+
+<a href="https://www.youtube.com/c/DhiWise"><img src="https://cdn.vox-cdn.com/thumbor/0kpe316UpZWk53iw3bOLoJfF6hI=/0x0:1680x1050/1400x1400/filters:focal(706x391:974x659):format(gif)/cdn.vox-cdn.com/uploads/chorus_image/image/56414325/YTLogo_old_new_animation.0.gif" width="60" alt="DhiWise YouTube"></a>
+
+<a href="https://discord.gg/UPhCetBkVu"><img src="https://user-images.githubusercontent.com/47489894/183043664-b01aac56-0372-458a-bde9-3f2a6bded21b.png" width="60" alt="DhiWise Discord"></a>
+
+<a href="https://docs.dhiwise.com/docs/react/intro"><img src="https://global-uploads.webflow.com/618e36726d3c0f19c9284e56/62383865d5477f2e4f6b6e2e_main-monogram-p-500.png" width="60" alt="DhiWise Documentation"></a>
