@@ -1,5 +1,5 @@
 {
-  "id": "e9677a02-0f2a-4861-bd58-3c917c5efa1e",
+  "id": "a765644c-4dd4-4b73-8f14-546c3cb67591",
   "name": "todo_cc_sql_environment",
   "values": [
     {
@@ -14,6 +14,6 @@
     }
   ],
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2023-05-22T11:45:26.664Z",
+  "_postman_exported_at": "2023-05-22T11:51:05.763Z",
   "_postman_exported_using": "Postman"
 }
