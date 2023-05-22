@@ -20,7 +20,8 @@ function makeModel (sequelize){
     updatedAt:{ type:DataTypes.DATE },
     isDeleted:{ type:DataTypes.BOOLEAN },
     addedBy:{ type:DataTypes.INTEGER },
-    updatedBy:{ type:DataTypes.INTEGER }
+    updatedBy:{ type:DataTypes.INTEGER },
+    userId:{ type:DataTypes.STRING }
   }
   ,{
     hooks:{

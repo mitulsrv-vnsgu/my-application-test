@@ -11,6 +11,7 @@ module.exports = (category) => {
     isDeleted: category.isDeleted,
     addedBy: category.addedBy,
     updatedBy: category.updatedBy,
+    userId: category.userId,
   };
 
   // remove undefined values
